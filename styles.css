@@ -1,0 +1,257 @@
+/* RESET CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-links a {
+  font-size: 1.8rem;
+  color: #fff; /* Mettre les icônes en blanc */
+  background-color: #007bff; /* Fond bleu visible */
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+
+header {
+  background-color: #004080;
+  color: #fff;
+  padding: 20px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.photo img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+
+}
+
+.personal-info h1 {
+  font-size: 1.8rem;
+}
+
+.personal-info p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* NAVIGATION */
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  background-color: #00274d;
+  padding: 15px 0;
+}
+
+nav ul a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+
+nav ul a:hover {
+  background-color: #0056b3;
+  border-radius: 5px;
+}
+
+/* MAIN CONTENT */
+main {
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  border-bottom: 2px solid #004080;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+/* SKILLS SECTION */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill {
+  flex: 1 1 calc(50% - 20px);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f0f8ff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.skill img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+
+/* PROJECTS 1*/
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Augmente la taille des colonnes */
+  gap: 50px;
+}
+
+.project {
+  background-color: #b4cee5;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(45, 193, 16, 0.2);
+}
+/* YOKKAT image*/
+.project img {
+  width: 100%; /* L'image prendra toute la largeur du conteneur */
+  max-height: 300px; /* Augmente la hauteur */
+  object-fit: cover; /* Ajuste l'image pour qu'elle remplisse bien la zone */
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out; /* Animation pour l'effet zoom */
+}
+
+.project img:hover {
+  transform: scale(3); /* Effet de zoom au survol */
+}
+
+
+
+
+.project img {
+  width: 10000%; /* L'image prendra toute la largeur du conteneur */
+  max-height: 50000px; /* Augmente la hauteur max */
+  object-fit: scale(1.5); /* Ajuste l'image pour qu'elle remplisse bien la zone */
+  border-radius: 50px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  margin-top: 10px;
+  background-color: #004080;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.project {
+  background-color: #f0f8ff;
+  padding: 60px;
+  border-radius: 1000px;
+  text-align: center;
+}
+
+
+
+
+/* CONTACT FORM */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #004080;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background-color: #00274d;
+  color: #fff;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .skills-list {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul a {
+    margin: 5px 0;
+  }
+}
+
+

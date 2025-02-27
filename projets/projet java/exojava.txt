@@ -1,0 +1,17 @@
+Développez un programme en Java avec une classe mère Vehicule et ses dérivés à savoir : Voiture, Moto et TriCycle
+et ses méthodes : demarrer, accelerer, ralentir, freiner, afficherTypeDeVehicule, calculerHeureDarrivee et arriverAdestination pour mettre fin à la course
+
+Prendre le rôle d'un chauffeur qui conduit son client sur une autoroute
+
+Instaurer un dialogue entre vous et le client pour lui permettre de choisir son type de véhicule ainsi que la distance à parcourir et la vitesse 
+
+Au démarrage affichez l'heure de départ et l'heure approximative d'arrivée selon la vitesse et la distance à parcourir tout en sachant qu'on ne peut dépasser 120 km/h 
+Delà faites sortir les attributs de la classe mère en plus de la marque du modèle et du type de moteur.
+démarrer à 0 et incrémenter de 5 la vitesse par rapport au choix du client et afficher à chaque fois la vitesse parcourue jusqu'à la vitesse demandée et toujours revenir au client pour lui demander si on doit maintenir le cap si oui tant mieux sinon ajuster selon ses désirs tout en affichant les vitesses 
+
+
+À la fin de la course le client devrait recevoir une demande de satisfaction comme sur Yango pour noter le chauffeur et l'état de la voiture 
+NB: cette partie n'est accessible qu'à l'administration.
+
+
+pré requis : faire des recherches sur Java : manipuler l'heure et la date

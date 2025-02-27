@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Immobilier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    #customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      #customers td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      
+      #customers tr:nth-child(even){background-color: #f2f2f2;}
+      
+      #customers tr:hover {background-color: #ddd;}
+      
+      #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+      }
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="logement.html">Logement</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="inscription.html">inscription</a></li>
+            </ul>
+        </nav>
+        <div class="banner">
+            <img src="banner.jpg" alt="Banner Image">
+            <div class="banner-text">
+                <h1>Bienvenue sur notre site immobilier</h1>
+                <p>Trouvez la maison de vos rêves</p>
+            </div>
+        </div>
+    </header>
+    <main>
+       
+        <table id="customers">
+            <tr>
+              <th>N°Log</th>
+              <th>Nom Logement</th>
+              <th>Rue</th>
+              <th>Prix loyer</th>
+              <th>Quartier</th>
+              <th>Type</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Immeuble MAMADOU LAYE MBAYE</td>
+              <td>CAMBERENE 1</td>
+              <td>500000</td>
+              <td>ALMADIE</td>
+              <td>Studio</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Immeuble Kazam</td>
+              <td>Malika plage</td>
+              <td>75000</td>
+              <td>MALIKA</td>
+              <td>Chambre</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Immeuble ALIOUNE SENE</td>
+              <td>Rue 7 coté plage de BCEAO</td>
+              <td>100000</td>
+              <td>YOFF</td>
+              <td>Studio</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Immeuble OUSMANE DIOP</td>
+              <td>1Rue De YAYE FALL</td>
+              <td>270000</td>
+              <td>keur massar</td>
+              <td>Appartement</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Immeuble ALY GUEYE</td>
+                <td>Rue 5x13 GRAND DAKAR</td>
+                <td>200000</td>
+                <td>DAKAR</td>
+                <td>Studio</td>
+          </table>
+    </main>
+    <footer>
+        <p>&copy; 2024 Site Immobilier. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,157 @@
+package projetJAVA1;
+
+import java.util.*;
+
+// Classe mère Vehicule
+abstract class Vehicule {
+    protected String marque;
+    protected String modele;
+    protected String typeMoteur;
+    protected int vitesseActuelle;
+    protected final int VITESSE_MAX = 120;
+
+    public Vehicule(String marque, String modele, String typeMoteur) {
+        this.marque = marque;
+        this.modele = modele;
+        this.typeMoteur = typeMoteur;
+        this.vitesseActuelle = 0;
+    }
+
+    public void demarrer() {
+        System.out.println("Le véhicule a démarré.SVP Attacher votre ceinture pour la sécurité et");
+    }
+
+    public void accelerer(int vitesseCible) {
+        while (vitesseActuelle < vitesseCible && vitesseActuelle < VITESSE_MAX) {
+            vitesseActuelle += 5;
+            System.out.println("Vitesse actuelle : " + vitesseActuelle + " km/h");
+        }
+    }
+
+    public void ralentir() {
+        vitesseActuelle -= 5;
+        if (vitesseActuelle < 0) vitesseActuelle = 0;
+        System.out.println("Vitesse actuelle après ralentissement : " + vitesseActuelle + " km/h");
+    }
+
+    public void freiner() {
+        vitesseActuelle = 0;
+        System.out.println("Le véhicule s'est arrêté. Regarder bien si vous avez rien oublié.");
+    }
+
+    public void afficherTypeDeVehicule() {
+        System.out.println("Type de véhicule : " + this.getClass().getSimpleName());
+    }
+
+    public void calculerHeureDarrivee(double distance, int vitesse) {
+        double temps = distance / vitesse; // Temps en heures
+        Calendar heureDepart = Calendar.getInstance();
+        Calendar heureArrivee = (Calendar) heureDepart.clone();
+        heureArrivee.add(Calendar.MINUTE, (int) (temps * 60));
+        System.out.printf("Heure de départ : %tR%n", heureDepart);
+        System.out.printf("Heure d'arrivée approximative : %tR%n", heureArrivee);
+        System.out.printf("Temps de trajet estimé : %.2f heures%n", temps);
+    }
+
+    public void arriverAdestination() {
+        System.out.println("Vous êtes arrivé à la destination et");
+    }
+}
+
+class Voiture extends Vehicule {
+    public Voiture(String marque, String modele) {
+        super(marque, modele, "Essence");
+    }
+}
+
+class Moto extends Vehicule {
+    public Moto(String marque, String modele) {
+        super(marque, modele, "Essence");
+    }
+}
+
+class Tricycle extends Vehicule {
+    public Tricycle(String marque, String modele) {
+        super(marque, modele, "Electrique");
+    }
+}
+
+public class ChauffeurClientSimulation {
+    
+	public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Vehicule vehicule = null;
+
+        System.out.println("Bienvenu dans notre Agent Yango; SVP choisissez le type de véhicule que tu veux voyager(1: Voiture, 2: Moto, 3: Tricycle) : ");
+        int choix = scanner.nextInt();
+        scanner.nextLine(); // Consommer la nouvelle ligne
+
+        switch (choix) {
+            case 1 -> vehicule = new Voiture("Toyota", "Corolla");
+            case 2 -> vehicule = new Moto("Yamaha", "R6");
+            case 3 -> vehicule = new Tricycle("Piaggio", "Ape");
+            default -> {
+                System.out.println("Choix invalide.");
+                System.exit(0);
+            }
+        }
+
+        vehicule.afficherTypeDeVehicule();
+        System.out.println("Marque : " + vehicule.marque);
+        System.out.println("Modèle : " + vehicule.modele);
+        System.out.println("Type de moteur : " + vehicule.typeMoteur);
+
+        vehicule.demarrer();
+
+        System.out.println("SVP Entrez la distance à parcourir (en km) : ");
+        double distance = scanner.nextDouble();
+
+        System.out.println("SVP Entrez la vitesse souhaitée (max 120 km/h) : ");
+        int vitesse = scanner.nextInt();
+        if (vitesse > vehicule.VITESSE_MAX) vitesse = vehicule.VITESSE_MAX;
+
+        vehicule.calculerHeureDarrivee(distance, vitesse);
+        vehicule.accelerer(vitesse);
+
+        boolean enRoute = true;
+        while (enRoute) {
+            System.out.println("Voulez-vous ajuster la vitesse ? (oui/non) : ");
+            String reponse = scanner.next();
+            if (reponse.equalsIgnoreCase("oui")) {
+                System.out.println("Entrez la nouvelle vitesse (max 120 km/h) : ");
+                vitesse = scanner.nextInt();
+                if (vitesse > vehicule.VITESSE_MAX) vitesse = vehicule.VITESSE_MAX;
+                vehicule.accelerer(vitesse);
+            } else {
+                enRoute = false;
+            }
+        }
+
+        vehicule.arriverAdestination();
+        
+        System.out.println("Accès à la section d'administration :");
+        int essais = 3;
+        while (essais > 0) {
+            System.out.println("Entrez le mot de passe administrateur :");
+            String motDePasse = scanner.next();
+            if (motDePasse.equals("admin123")) {
+                System.out.println("Merci de noter le chauffeur (de 1 à 5) :");
+                int note = scanner.nextInt();
+                System.out.println("Merci de noter l'état du véhicule (de 1 à 5) :");
+                int etatVehicule = scanner.nextInt();
+                System.out.printf("Note du chauffeur : %d/5, état du véhicule : %d/5%n", note, etatVehicule);
+                break;
+            } else {
+                essais--;
+                System.out.printf("Mot de passe incorrect. Il vous reste %d tentative(s).%n", essais);
+            }
+        }
+
+        if (essais == 0) {
+            System.out.println("Accès refusé.");
+        }
+        System.out.println("Au plaisir de se croiser à nouveau sur le chemin de la vie !");
+        scanner.close();
+    }
+	
+}

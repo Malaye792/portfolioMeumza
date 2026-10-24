@@ -3,155 +3,408 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV - Mamadou Laye Mbaye</title>
+  <meta name="theme-color" content="#00274d">
+  <title>Mamadou Laye Mbaye — Administrateur réseaux et systèmes</title>
+  <meta name="description" content="Portfolio de Mamadou Laye Mbaye, diplômé en Génie Informatique à Dakar : supervision, réseaux, systèmes, cybersécurité et développement web. Cofondateur de Nugalma Bio.">
+  <meta property="og:title" content="Mamadou Laye Mbaye — Administrateur réseaux et systèmes">
+  <meta property="og:description" content="Supervision, réseaux, systèmes et développement web. Cofondateur de Nugalma Bio.">
+  <meta property="og:type" content="website">
+  <script>document.documentElement.classList.add('js');setTimeout(function(){document.documentElement.classList.add('ready')},4500);</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <!-- Ajout d'une librairie d'icônes (FontAwesome) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-  <header>
-    <div class="header-container">
-      <div class="photo">
-        <img src="image/tof moi.jpg" alt="Photo de Mamadou Laye Mbaye" width="150" height="150">
-      </div>
-      <div class="personal-info">
-        <h1>Mamadou Laye Mbaye</h1>
-        <p>Ingénieur en Réseau Informatique | Expert en Sécurité et Cloud Computing</p>
-      </div>
-      <div class="social-links">
-        <a href="https://github.com/Malaye792" target="_blank" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://twitter.com/MamadoulayeMba1" target="_blank" aria-label="Twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://www.snapchat.com/add/og_meumza1" target="_blank" aria-label="Snapchat">
-          <i class="fab fa-snapchat"></i>
-        </a>
-        <a href="https://wa.me/221781506847" target="_blank" aria-label="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://linkedin.com/in/Mamadou Laye Mbaye" target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </div>
-    </div>
+  <div class="loader" id="loader" aria-hidden="true">
+    <span class="loader-mark">ML<b>.</b></span>
+    <span class="loader-bar"><i></i></span>
+  </div>
+
+  <a class="skip" href="#plateformes">Aller aux projets</a>
+
+  <header class="site-header" id="header">
+    <a class="brand" href="#top"><span class="brand-dot" aria-hidden="true"></span>Mamadou Laye Mbaye</a>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
+      <span></span><span></span>
+    </button>
+    <nav id="nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="#plateformes">Projets</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#parcours">Parcours</a></li>
+        <li><a href="#attestations">Attestations</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="MMD-CV.pdf" class="nav-cv" download>Télécharger le CV</a></li>
+      </ul>
+    </nav>
+    <div class="progress" id="progress" aria-hidden="true"></div>
   </header>
 
-  <nav>
-    <ul class="nav-menu">
-      <li><a href="#about">À propos</a></li>
-      <li><a href="#projects">Projets</a></li>
-      <li><a href="#skills">Compétences</a></li>
-      <li><a href="#experience">Expériences & Formation</a></li>
-      <li><a href="#certifications">Attestations & Certifications</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <canvas id="net" class="net" aria-hidden="true"></canvas>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="portrait-wrap">
+            <span class="ring ring-a" aria-hidden="true"></span>
+            <span class="ring ring-b" aria-hidden="true"></span>
+            <img class="portrait" src="image/tof moi.jpg" alt="Photo de Mamadou Laye Mbaye" width="150" height="150">
+          </div>
+          <h1 aria-label="Mamadou Laye Mbaye">
+            <span class="w" style="--d:0"><span>Mamadou</span></span>
+            <span class="w" style="--d:1"><span>Laye</span></span>
+            <span class="w" style="--d:2"><span>Mbaye</span></span>
+          </h1>
+          <p class="role intro" id="role" style="--d:3">Administrateur réseaux et systèmes junior</p>
+          <p class="lead intro" style="--d:4">Diplômé en Génie Informatique à Dakar. Je déploie des plateformes de supervision, je sécurise des infrastructures réseau et je cofonde Nugalma Bio, une plateforme de produits agricoles locaux.</p>
+          <p class="status intro" style="--d:5"><span class="dot" aria-hidden="true"></span>Disponible pour un poste d’administrateur réseaux et systèmes</p>
+          <div class="hero-actions intro" style="--d:6">
+            <a class="btn btn-primary" data-magnetic href="#plateformes">Voir les projets</a>
+            <a class="btn btn-ghost" data-magnetic href="MMD-CV.pdf" download>Télécharger le CV</a>
+          </div>
+        </div>
+
+        <div class="tilt" id="tilt"><figure class="panel intro" style="--d:5" aria-labelledby="panel-cap">
+          <div class="panel-bar">
+            <span class="panel-title">senfintech / supervision</span>
+            <span class="panel-live"><i aria-hidden="true"></i>Aperçu illustratif</span>
+          </div>
+          <ul class="panel-rows">
+            <li data-spark>
+              <span class="svc">Prometheus</span>
+              <svg viewBox="0 0 120 28" aria-hidden="true"><polyline points=""/><circle r="3" cx="120" cy="14"/></svg>
+              <span class="state">Actif</span>
+            </li>
+            <li data-spark>
+              <span class="svc">Grafana</span>
+              <svg viewBox="0 0 120 28" aria-hidden="true"><polyline points=""/><circle r="3" cx="120" cy="14"/></svg>
+              <span class="state">Actif</span>
+            </li>
+            <li data-spark>
+              <span class="svc">Loki</span>
+              <svg viewBox="0 0 120 28" aria-hidden="true"><polyline points=""/><circle r="3" cx="120" cy="14"/></svg>
+              <span class="state">Actif</span>
+            </li>
+            <li data-spark>
+              <span class="svc">FortiGate (Syslog)</span>
+              <svg viewBox="0 0 120 28" aria-hidden="true"><polyline points=""/><circle r="3" cx="120" cy="14"/></svg>
+              <span class="state">Actif</span>
+            </li>
+            <li data-spark>
+              <span class="svc">Stack Docker</span>
+              <svg viewBox="0 0 120 28" aria-hidden="true"><polyline points=""/><circle r="3" cx="120" cy="14"/></svg>
+              <span class="state">Actif</span>
+            </li>
+          </ul>
+          <figcaption id="panel-cap">Les services de la plateforme SENFINTECH, mon projet de fin de Licence.</figcaption>
+        </figure></div>
+      </div>
+    </section>
+
+    <!-- BANDEAU TECHNOLOGIES -->
+    <div class="marquee" aria-label="Technologies maîtrisées">
+      <ul class="track">
+        <li>Prometheus</li><li>Grafana</li><li>Loki</li><li>Docker</li><li>Kubernetes</li><li>FortiGate</li><li>VMware</li><li>Linux</li><li>Windows Server</li><li>Active Directory</li><li>SNMP</li><li>Syslog</li><li>React</li><li>Python</li>
+      </ul>
     </div>
-  </nav>
 
-  <main>
-    <section id="about" class="section">
-      <h2>À propos</h2>
-      <p>Passionné par les technologies réseau, j'ai plus de 1 an d'expérience dans la conception, la mise en œuvre et la gestion de solutions réseaux complexes. J'apporte une expertise approfondie en sécurité informatique et en cloud computing pour garantir des infrastructures fiables et performantes.</p>
+    <!-- PLATEFORMES -->
+    <section id="plateformes" class="block">
+      <h2 data-split>Projets majeurs</h2>
+
+      <!-- Nugalma Bio -->
+      <article class="major nugalma reveal">
+        <div class="major-text">
+          <p class="major-kind">Plateforme web · Cofondation · 2026 à aujourd’hui</p>
+          <h3>Nugalma Bio</h3>
+          <p>Plateforme digitale de commercialisation de produits agricoles et transformés locaux. Je la co-développe avec mon équipe : catalogue, commandes, comptes utilisateurs et administration. Je participe aussi au déploiement, au marketing et à la recherche de partenaires.</p>
+          <ul class="tags"><li>React</li><li>Développement web</li><li>Déploiement</li></ul>
+          <a class="btn btn-solid" data-magnetic href="https://www.nugalmabio.com" target="_blank" rel="noopener">Visiter nugalmabio.com</a>
+        </div>
+
+        <a class="frame" id="frame" href="https://www.nugalmabio.com" target="_blank" rel="noopener" aria-label="Ouvrir la plateforme Nugalma Bio sur www.nugalmabio.com">
+          <span class="frame-bar">
+            <span class="frame-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="frame-url">www.nugalmabio.com</span>
+          </span>
+          <span class="frame-body" aria-hidden="true">
+            <span class="fb-head"></span>
+            <span class="fb-grid">
+              <span class="fb-cell">Catalogue</span>
+              <span class="fb-cell">Commandes</span>
+              <span class="fb-cell">Comptes</span>
+              <span class="fb-cell">Administration</span>
+            </span>
+          </span>
+        </a>
+      </article>
+
+      <!-- SENFINTECH -->
+      <article class="major senfintech reveal">
+        <div class="major-text">
+          <p class="major-kind">Projet de fin de Licence · Univers Professionnel · 2025 à 2026</p>
+          <h3>Plateforme de supervision SENFINTECH</h3>
+          <p>Conception et déploiement d’une plateforme de supervision et de sécurisation de l’infrastructure réseau d’un acteur fintech. Une stack Docker collecte les métriques des serveurs, des conteneurs et du pare-feu FortiGate, centralise les journaux Syslog et affiche le tout dans des tableaux de bord Grafana.</p>
+          <p>Le projet a validé les 9 critères d’acceptation et les 10 objectifs fixés, et a fait l’objet d’une soutenance orale.</p>
+          <ul class="tags">
+            <li>Docker</li><li>Prometheus</li><li>Grafana</li><li>Loki</li><li>InfluxDB</li><li>Telegraf</li><li>FortiGate</li><li>Syslog</li>
+          </ul>
+        </div>
+        <dl class="stats">
+          <div>
+            <dt>critères d’acceptation validés</dt>
+            <dd><span data-count="9">9</span></dd>
+          </div>
+          <div>
+            <dt>objectifs atteints</dt>
+            <dd><span data-count="10">10</span></dd>
+          </div>
+        </dl>
+      </article>
+
+      <!-- Agent SOC -->
+      <article class="major soc reveal">
+        <div class="soc-head">
+          <p class="major-kind">Projet indépendant · Cybersécurité · Intelligence artificielle</p>
+          <h3>Cybersecurity Expert Pro Max V5</h3>
+        </div>
+        <div class="major-text">
+          <p>Conception d’un agent IA pour centre d’opérations de sécurité (SOC). Le projet comprend un system prompt détaillé et un document d’architecture technique : gouvernance, contrôle d’accès par rôles (RBAC), moteur de politiques, moteur de risque et alignement sur MITRE ATT&amp;CK.</p>
+          <ul class="tags"><li>SOC</li><li>MITRE ATT&amp;CK</li><li>RBAC</li><li>Architecture</li></ul>
+        </div>
+      </article>
     </section>
 
-    
-    <section id="projects" class="section">
-      <h2>Projets</h2>
-      <div class="project-grid">
-        <div class="project">
-          <h3>Gestion de Stationnement</h3>
-          <div class="skill"><img src="projets/sta.jpg" alt="Gestion de Stationnement"></div>
-          <p>Développement d'une base de données pour la gestion du stationnement.</p>
-          <a href="projets/agentClient.mdj" class="btn">Voir plus</a>
-        </div>
-        <div class="project">
-          <h3>Site Web </h3>
-          <div class="skill"><img src="projets/imo.jpg" alt="site web"></div>
-          <p>Conception d'un site web professionnel avec html & css.</p>
-          <a href="projets/NION BAGNE" class="btn">Voir plus</a>
-        </div>
-        <div class="project">
-          <h3>CREATION DES APPLICATION</h3>
-          <div class="skill"><img src="projets/apl.jpg" alt="application avec python"></div>
-          <p>Faites de vos rêves une réalité avec mes services</p>
-          <a href="projets/app python" class="btn">Voir plus</a>
-        </div>
-      </div>
-    </section>
-    
+    <!-- AUTRES PROJETS -->
+    <section id="realisations" class="block">
+      <h2 data-split>Autres réalisations</h2>
+      <ul class="work-list">
+        <li class="work reveal">
+          <div class="work-head">
+            <h3>Application de trésorerie Nugalma Bio</h3>
+            <span class="kind">Application web</span>
+          </div>
+          <div class="work-body">
+            <p>Application React pour la coopérative : saisie des opérations, registre, tableau de bord, alertes de budget, archives et rapports exportables en PDF et Excel. Quatre versions successives.</p>
+            <ul class="tags"><li>React</li><li>PDF</li><li>Excel</li></ul>
+          </div>
+        </li>
 
+        <li class="work reveal">
+          <div class="work-head">
+            <h3>Déploiement DevOps d’une application de vote</h3>
+            <span class="kind">Rapport de projet</span>
+          </div>
+          <div class="work-body">
+            <p>Déploiement de l’application example-voting-app avec Docker et Kubernetes, supervisée par Prometheus et Grafana. Rapport complet avec captures d’écran à chaque étape.</p>
+            <ul class="tags"><li>Docker</li><li>Kubernetes</li><li>Prometheus</li><li>Grafana</li></ul>
+          </div>
+        </li>
 
+        <li class="work reveal">
+          <div class="work-head">
+            <h3>Windows Server 2025 sous VMware</h3>
+            <span class="kind">Infrastructure</span>
+          </div>
+          <div class="work-body">
+            <p>Installation complète d’un serveur : adressage IP statique, partage de fichiers SMB, DHCP, DNS et promotion en contrôleur de domaine Active Directory.</p>
+            <ul class="tags"><li>Windows Server</li><li>VMware</li><li>Active Directory</li><li>DHCP</li><li>DNS</li></ul>
+          </div>
+        </li>
 
+        <li class="work reveal">
+          <div class="work-head">
+            <h3>COCKPIT v3.0</h3>
+            <span class="kind">Simulation embarquée</span>
+          </div>
+          <div class="work-body">
+            <p>Simulation Arduino sous Wokwi pilotée par une machine à états : joystick, servomoteur, LED RVB, buzzer, écran LCD et clavier.</p>
+            <ul class="tags"><li>Arduino</li><li>C++</li><li>Wokwi</li></ul>
+          </div>
+        </li>
 
+        <li class="work reveal">
+          <div class="work-head">
+            <h3>Gestion de stationnement</h3>
+            <span class="kind">Base de données</span>
+            <img src="projets/sta.jpg" alt="Capture du projet de gestion de stationnement" loading="lazy" width="220" height="132">
+          </div>
+          <div class="work-body">
+            <p>Modélisation d’une base de données relationnelle pour gérer un parc de stationnement.</p>
+            <a class="more" href="projets/agentClient.mdj" download>Télécharger le modèle (.mdj)</a>
+          </div>
+        </li>
 
+        <li class="work reveal">
+          <div class="work-head">
+            <h3>Site web immobilier</h3>
+            <span class="kind">Site web</span>
+            <img src="projets/imo.jpg" alt="Capture du site immobilier" loading="lazy" width="220" height="132">
+          </div>
+          <div class="work-body">
+            <p>Site de logements en HTML et CSS : accueil, liste des logements, inscription et contact.</p>
+            <a class="more" href="projets/NION%20BAGNE/OG~MEUMZA/index.html">Ouvrir le site</a>
+          </div>
+        </li>
 
-    <section id="skills" class="section">
-      <h2>Compétences</h2>
-      <div class="skills-list">
-        <div class="skill"><img src="image/cisco.jpg" alt="Cisco"><p>Cisco (CCNA)</p></div>
-        <div class="skill"><img src="image/securite.jpg" alt="Sécurité"><p>Sécurité Informatique</p></div>
-        <div class="skill"><img src="image/vmware.jpg" alt="VMware"><p>VMware</p></div>
-        <div class="skill"><img src="image/hyper-v.jpg" alt="Hyper-V"><p>Hyper-V</p></div>
-        <div class="skill"><img src="image/php.jpg" alt="PHP"><p>PHP</p></div>
-        <div class="skill"><img src="image/python.jpg" alt="Python"><p>Python</p></div>
-        <div class="skill"><img src="image/js.jpg" alt="JavaScript"><p>JavaScript</p></div>
-        <div class="skill"><img src="image/langage C.jpg" alt="C"><p>C</p></div>
-        <div class="skill"><img src="image/mysql.jpg" alt="MySQL"><p>MySQL</p></div>
-        <div class="skill"><img src="image/wordpress.jpg" alt="WordPress"><p>WordPress</p></div>
-        <div class="skill"><img src="image/maintenance.jpg" alt="Maintenance"><p>Maintenance Informatique</p></div>
-      </div>
-    </section>
-
-    <section id="experience" class="section">
-      <h2>Expériences professionnelles & Formation</h2>
-      <ul>
-        <li>Aucune expérience professionnelle formelle à ce jour, mais plusieurs projets académiques réalisés avec succès.</li>
-        <li><strong>Licence en Génie Informatique (en cours)</strong> - Univers Professionnel, Dakar (2023 - 2025)</li>
+        <li class="work reveal">
+          <div class="work-head">
+            <h3>Scripts Python</h3>
+            <span class="kind">Python</span>
+            <img src="projets/apl.jpg" alt="Capture des scripts Python" loading="lazy" width="220" height="132">
+          </div>
+          <div class="work-body">
+            <p>Calcul d’IMC, analyse de texte et génération de PDF.</p>
+            <a class="more" href="https://github.com/Malaye792/portfolioMeumza/tree/main/projets/app%20python">Voir le code sur GitHub</a>
+          </div>
+        </li>
       </ul>
     </section>
 
-    <section id="certifications" class="section">
-      <h2>Attestations & Certifications</h2>
-      <p>Voici mes attestations et certifications obtenues :</p>
-      <ul>
-        <li>ATTESTATION DE FORMATION DE ETAT-MAJOR DE L'ARMEE DE TERRE.</li>
-        <li>ATTESTATION DE STAGE TGI.</li>
-      </ul>
-      <div class="certifications-gallery">
-        <figure>
-          <img src="image/fortion bango.jpg" alt="ARMEE" width="300" height="200">
-          <figcaption>FORMATION PRITANEE MILITAIRE CHARLES N'TCHORERE DE SAINT-LOUIS</figcaption>
+    <!-- COMPÉTENCES -->
+    <section id="competences" class="block">
+      <h2 data-split>Compétences</h2>
+      <dl class="skills">
+        <div class="reveal">
+          <dt>Réseaux</dt>
+          <dd>
+            <ul class="chips"><li>TCP/IP</li><li>VLAN</li><li>DHCP</li><li>DNS</li><li>NAT</li><li>SNMP</li><li>Syslog</li><li>SSH</li><li>VPN</li></ul>
+            <p class="note">Cisco CCNA en préparation.</p>
+          </dd>
+        </div>
+        <div class="reveal">
+          <dt>Sécurité</dt>
+          <dd>
+            <ul class="chips"><li>FortiGate</li><li>Pare-feu</li><li>Journalisation</li></ul>
+            <p class="note">Fortinet Certified Associate en préparation.</p>
+          </dd>
+        </div>
+        <div class="reveal">
+          <dt>Supervision</dt>
+          <dd>
+            <ul class="chips"><li>Prometheus</li><li>Grafana</li><li>Loki</li><li>Alertmanager</li><li>InfluxDB</li><li>Telegraf</li></ul>
+          </dd>
+        </div>
+        <div class="reveal">
+          <dt>Systèmes et conteneurs</dt>
+          <dd>
+            <ul class="chips"><li>Linux (Ubuntu, Debian)</li><li>Windows Server</li><li>Active Directory</li><li>VMware</li><li>Hyper-V</li><li>Docker</li><li>Kubernetes</li></ul>
+          </dd>
+        </div>
+        <div class="reveal">
+          <dt>Développement</dt>
+          <dd>
+            <ul class="chips"><li>React</li><li>JavaScript</li><li>Python</li><li>PHP</li><li>Java</li><li>C</li><li>SQL</li><li>MySQL</li><li>Git</li><li>WordPress</li></ul>
+          </dd>
+        </div>
+        <div class="reveal">
+          <dt>Support</dt>
+          <dd>
+            <ul class="chips"><li>Assistance utilisateurs</li><li>Maintenance préventive et corrective</li><li>Documentation des interventions</li></ul>
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- PARCOURS -->
+    <section id="parcours" class="block">
+      <h2 data-split>Parcours</h2>
+      <ol class="timeline" id="timeline">
+        <li>
+          <p class="when">2026 à aujourd’hui</p>
+          <h3>Cofondateur et développeur web, Nugalma Bio</h3>
+          <p>Dakar. Plateforme de commercialisation de produits agricoles et transformés locaux : développement, déploiement, marketing et partenariats.</p>
+        </li>
+        <li>
+          <p class="when">2024, 2025 et 2026</p>
+          <h3>Stagiaire informatique, TGI</h3>
+          <p>Trois stages de trois mois, soit neuf mois au total : assistance technique, maintenance des équipements, installation de postes Windows et participation à l’administration du réseau local.</p>
+        </li>
+        <li>
+          <p class="when">2023 à 2026</p>
+          <h3>Licence en Génie Informatique</h3>
+          <p>Univers Professionnel, Dakar. Projet de fin d’études SENFINTECH et projet DevOps encadré.</p>
+        </li>
+        <li>
+          <p class="when">Formation militaire</p>
+          <h3>État-major de l’armée de terre</h3>
+          <p>Prytanée militaire Charles N’Tchoréré, Saint-Louis.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ATTESTATIONS -->
+    <section id="attestations" class="block">
+      <h2 data-split>Attestations</h2>
+      <div class="certs">
+        <figure class="reveal">
+          <button class="cert-btn" type="button" data-full="image/unodc-cybercriminalite.png" aria-label="Agrandir : certificat UNODC">
+            <img src="image/unodc-cybercriminalite.png" alt="Certificat de réussite UNODC, cours en ligne sur la cybercriminalité" loading="lazy" width="300" height="212">
+          </button>
+          <figcaption>Cybercriminalité, cours en ligne de l’Office des Nations Unies contre la drogue et le crime (27 avril 2026)</figcaption>
         </figure>
-        <figure>
-          <img src="image/stage.jpg" alt="TGI" width="300" height="200">
-          <figcaption>STAGE TGI</figcaption>
+        <figure class="reveal">
+          <button class="cert-btn" type="button" data-full="image/stage.jpg" aria-label="Agrandir : attestation de stage TGI">
+            <img src="image/stage.jpg" alt="Attestation de stage TGI" loading="lazy" width="300" height="200">
+          </button>
+          <figcaption>Attestation de stage TGI</figcaption>
+        </figure>
+        <figure class="reveal">
+          <button class="cert-btn" type="button" data-full="image/fortion bango.jpg" aria-label="Agrandir : attestation de formation militaire">
+            <img src="image/fortion bango.jpg" alt="Attestation de formation de l’état-major de l’armée de terre" loading="lazy" width="300" height="200">
+          </button>
+          <figcaption>Formation à l’état-major de l’armée de terre, Prytanée militaire de Saint-Louis</figcaption>
         </figure>
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>Numéro de téléphone : <a href="tel:+221781506847">+221 78 150 68 47</a></p>
-      <p>Email : <a href="mailto:malaye250@gmail.com">malaye250@gmail.com</a></p>
-      <form class="contact-form">
-        <input type="text" name="name" placeholder="Votre nom & Prénom" required>
-        <input type="email" name="email" placeholder="Votre email" required>
-        <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
-        <button type="submit">Envoyer</button>
-      </form>
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <span class="orb orb-a" aria-hidden="true"></span>
+      <span class="orb orb-b" aria-hidden="true"></span>
+      <div class="contact-inner">
+        <div class="contact-intro reveal">
+          <h2 data-split>Contact</h2>
+          <p class="contact-lead">Un poste, un projet ou une question ? Écrivez-moi, je réponds rapidement.</p>
+          <a class="mail-big" href="mailto:malaye250@gmail.com">malaye250@gmail.com</a>
+          <ul class="contact-links">
+            <li><a href="tel:+221781506847">+221 78 150 68 47</a></li>
+            <li><a href="https://wa.me/221781506847" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="https://www.linkedin.com/in/mamadou-laye-mbaye" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/Malaye792" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://twitter.com/MamadoulayeMba1" target="_blank" rel="noopener">X (Twitter)</a></li>
+          </ul>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form" style="--i:2">
+          <label>Nom et prénom
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label>Email
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary" id="send-btn">Envoyer par email</button>
+          <p class="form-note">Le bouton ouvre votre application de messagerie avec le message pré-rempli.</p>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 OG~MEUMZA~A1. Tous droits réservés.</p>
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Mamadou Laye Mbaye</p>
   </footer>
+
+  <dialog id="lightbox" aria-label="Aperçu de l’attestation">
+    <button class="lb-close" type="button" id="lb-close" aria-label="Fermer">&times;</button>
+    <img id="lb-img" src="" alt="">
+  </dialog>
 
   <script src="script.js"></script>
 </body>
